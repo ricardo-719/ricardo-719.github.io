@@ -1,20 +1,219 @@
+/* Contrast ratio of fonts/background is 9.88:1*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #bcbbff
+}
+
 html {
     font-size: 16px;
+    font-family: 'Pacifico', cursive;
 }
 
 body {
-    /*background-color: #181818;*/
+    background-color: #181818;
     /*background-color: #0D1A81;*/
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
 }
 
+header {
+  display: flex;
+  justify-content: space-around;
+}
 
+#logo {
+  max-width: 23rem;
+  height: auto;
+  margin-top: 1%;
+}
+
+.button-nav {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 8%;
+  font-size: 2.2rem;
+  list-style: none;
+}
+
+.toggle {
+  margin-top: 1%;
+  color: #bcbbff;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 4rem;
+  font-size: 0.8rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.lightmode {
+  display: none;
+}
+
+@media only screen and (max-width: 890px) {
+
+  .mobile {
+    display: block;
+  }
+
+  .lightmode {
+    display: none;
+  }
+
+  .fullScreen {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-around;
+    flex-wrap: nowrap;
+    max-width: 40rem;
+    min-width: 18.1rem;
+    height: auto;
+    margin: 4% auto;
+  }
+
+  .mobileView {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 1%;
+  }
+
+  .mobileButtons {
+    display: flex;
+    float: right;
+    margin-right: 1%;
+  }
+
+  #logo {
+    max-width: 15rem;
+    height: auto;
+    margin-top: 1%;
+    margin-left: 1%;
+  }
+
+  #headerButtonNav {
+    margin-top: 1%;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5%;
+  }
+
+  header ul li {
+    font-size: 1rem;
+    transition: 300ms;
+  }
+
+  .button-nav {
+    display: inline-block;
+    background: transparent;
+    border: 3px solid var(--button-color, white);
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px black;
+    --button-color: #bcbbff;
+    margin-right: 5%;
+    cursor: pointer;
+  }
+    
+  .button-nav .line {
+    transition: 600ms;
+  }
+    
+  .button-nav[aria-pressed="true"] :is(.top, .bottom) {
+    y: 50;
+  }
+
+  header nav .menu {
+    display: none;
+    max-height: 0;
+    color:#181818;
+  }
+
+  header nav .menu[aria-pressed="true"] {
+    display: flex;
+    flex-direction: row;
+    max-height: 2rem;
+    color: #bcbbff;
+  }
+
+  #headerMenuNav li a {
+    font-size: 1.3rem;
+  }
+}
+
+/*.btn {
+  display: inline-block;
+  background-color: rgb(222, 184, 135, 0.8);
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnOne::before  {
+  content: "";
+  position: absolute;
+  background-color: rgba(235, 222, 120, 0.9);
+  width: 0px;
+  height: 0px;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.7s, height 0.7s;
+}
+
+.btnTwo::before  {
+  content: "";
+  position: absolute;
+  background-color: rgba(235, 222, 120, 0.9);
+  width: 0px;
+  height: 0px;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.7s, height 0.7s;
+}
+
+.btnOne:hover::before, .btnTwo:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}*/
 
 /*We'll enable dark and light mode, at every steap create two designs
 and to versions of CSS to be flipped with JS

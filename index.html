@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="asyncScript.js" async></script>
     <script src="deferScript.js" defer></script>
@@ -11,15 +17,41 @@
 </head>
 <body>
     <header>
-        <img src="https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogo.png" alt="Ricky Ricardo Logo">
-        <nav>
-            <ul>
-                <li>Portfolio</li>
-                <li>Skills</li>
-                <li>Contact</li>
+        <div class="mobileview">
+            <img id="logo" src="https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogo.png" alt="Ricky Ricardo Logo">
+            <div class="mobileButtons">
+                <button id="headerButtonNav" class="button-nav" onclick="active()" aria-controls="primary-navigation" aria-pressed="false">
+                    <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="35">
+                        <rect class="line top" width="80" height="10" x="10" y="30" rx="4"></rect>
+                        <rect class="line middle" width="80" height="10" x="10" y="50" rx="4"></rect>
+                        <rect class="line bottom" width="80" height="10" x="10" y="70" rx="4"></rect>
+                    </svg>
+                </button>
+                <div class="lightmode toggle mobile">
+                    <i class="fa-solid fa-moon"></i>
+                    <p>Dark Mode</p>
+                </div>
+                <div class="toggle mobile">
+                    <i class="fa-regular fa-sun"></i>
+                    <p>Light Mode</p>
+                </div>
+            </div>
+        </div>
+        <nav id="block">
+            <ul id="headerMenuNav" class="menu" aria-pressed="false">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <img src="" alt="">
+        <div class="lightmode toggle fullScreen">
+            <i class="fa-solid fa-moon"></i>
+            <p>Dark Mode</p>
+        </div>
+        <div class="toggle fullScreen">
+            <i class="fa-regular fa-sun"></i>
+            <p>Light Mode</p>
+        </div>   
     </header>
     <section id="about-me"></section>
     <main id="porfolio">
