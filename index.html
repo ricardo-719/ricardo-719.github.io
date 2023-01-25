@@ -19,6 +19,7 @@
     <header>
         <div class="mobileview">
             <img id="logo" src="https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogo.png" alt="Ricky Ricardo Logo">
+            <img id="logoLightmode" src="https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogoLightMode.png" alt="Ricky Ricardo Logo">
             <div class="mobileButtons">
                 <button id="headerButtonNav" class="button-nav" onclick="active()" aria-controls="primary-navigation" aria-pressed="false">
                     <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="35">
@@ -27,14 +28,16 @@
                         <rect class="line bottom" width="80" height="10" x="10" y="70" rx="4"></rect>
                     </svg>
                 </button>
-                <div class="lightmode toggle mobile">
-                    <i class="fa-solid fa-moon"></i>
-                    <p>Dark Mode</p>
-                </div>
-                <div class="toggle mobile">
-                    <i class="fa-regular fa-sun"></i>
-                    <p>Light Mode</p>
-                </div>
+                <a href="javascript:viewMode('mobile')">
+                    <div id="toggleLightmodeOne" class="togglelightmode toggle mobile">
+                        <i class="fa-solid fa-moon"></i>
+                        <p>Dark Mode</p>
+                    </div>
+                    <div id="toggleDarkmodeOne" class="toggle mobile">
+                        <i class="fa-regular fa-sun"></i>
+                        <p>Light Mode</p>
+                    </div>
+                </a>
             </div>
         </div>
         <nav id="block">
@@ -44,14 +47,16 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div class="lightmode toggle fullScreen">
-            <i class="fa-solid fa-moon"></i>
-            <p>Dark Mode</p>
-        </div>
-        <div class="toggle fullScreen">
-            <i class="fa-regular fa-sun"></i>
-            <p>Light Mode</p>
-        </div>   
+        <a href="javascript:viewMode()">
+            <div id="toggleLightmodeTwo" class="toggle fullScreen">
+                <i class="fa-solid fa-moon"></i>
+                <p>Dark Mode</p>
+            </div>
+            <div id="toggleDarkmodeTwo" class="darkmode toggle fullScreen">
+                <i class="fa-regular fa-sun"></i>
+                <p>Light Mode</p>
+            </div>
+        </a>
     </header>
     <section id="about-me"></section>
     <main id="porfolio">
