@@ -164,6 +164,7 @@ nav ul li {
   }
     
   .button-nav .line {
+    box-shadow: 1px 1px 1px #181818;
     transition: 600ms;
   }
     
