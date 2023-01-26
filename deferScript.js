@@ -8,68 +8,38 @@ function active() {
     }
 }
 
-let toggleState = true; //this
-let toggleMode = document.querySelector('.toggle');
-let logo = document.getElementById("logo"); //this
-let logoLightmode = document.getElementById("logoLightmode");
-let toggleLightmodeOne = document.getElementById("toggleLightmodeOne");
-let toggleLightmodeTwo =document.getElementById("toggleLightmodeTwo");
-let toggleDarkmodeOne = document.getElementById("toggleDarkmodeOne"); //this
-let toggleDarkmodeTwo = document.getElementById("toggleDarkmodeTwo");
-let buttonNav = document.getElementById("hamburgerButton")
-let burgerLine = document.getElementsByClassName("line")
-/*const viewMode = (screen) => {
-    document.body.classList.toggle('lightmode')
-    if (toggleState === true) {
-        toggleState = false;
-        logo.style.display = 'none';
-        toggleDarkmodeOne.style.display = 'none';
-        toggleDarkmodeTwo.style.display = 'none';
-        logoLightmode.style.display = 'block';
-        toggleLightmodeOne.style.display = 'inline';
-        toggleLightmodeTwo.style.display = 'inline';
-        console.log(buttonNav);
-        Array.from(buttonNav).map(function(button) {
-            button.style.border="2px solid #181818";
-        });
-    } else {
-        toggleState = true;
-        logo.style.display = 'block';
-        toggleDarkmodeOne.style.display = 'inline';
-        toggleDarkmodeTwo.style.display = 'inline';
-        logoLightmode.style.display = 'none';
-        toggleLightmodeOne.style.display = 'none';
-        toggleLightmodeTwo.style.display = 'none';
-        Array.from(buttonNav).map(function(button) {
-            button.style.border="2px solid #bcbbff";
-        });
-    }
-    if (screen === 'mobile') {
-        toggleDarkmodeTwo.style.display = 'none';
-        toggleLightmodeTwo.style.display = 'none';
-    } else {
-        toggleDarkmodeOne.style.display = 'none';
-        toggleLightmodeOne.style.display = 'none';
-    }
-}*/
+let toggleState = true; // Toggle between two states for dark/light mode
+let logo = document.getElementById("logo"); // Header Logo
+let toggleDarkmodeOne = document.getElementById("toggleDarkmodeOne"); // Toggle Button (mobile)
+let toggleDarkmodeTwo = document.getElementById("toggleDarkmodeTwo"); // Toggle Button (Full Screen)
+let buttonNav = document.getElementById("headerButtonNav") // Ham. button container
+let hamburgerButton = document.getElementById("hamburgerButton"); // Ham. button (svg)
+
     // Darkmode Function
-    const viewModeTwo = () => {
+    const viewMode = () => {
         // This class contains general Dark/Light mode properties
         document.body.classList.toggle('bodyLightmode');
         if (toggleState) {
             toggleState = false;
             toggleDarkmodeOne.innerHTML = '<i class="fa-solid fa-moon"></i><p>Dark Mode</p>';
+            toggleDarkmodeTwo.innerHTML = '<i class="fa-solid fa-moon"></i><p>Dark Mode</p>';
             logo.src = 'https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogoLightMode.png';
-            buttonNav.setAttribute('fill', 'var(#181818)');
+            hamburgerButton.setAttribute('fill', 'var(#181818)');
+            buttonNav.style.border = '2px solid #181818'
         } else {
             toggleState = true;
             toggleDarkmodeOne.innerHTML = '<i class="fa-regular fa-sun"></i><p>Light Mode</p>';
+            toggleDarkmodeTwo.innerHTML = '<i class="fa-regular fa-sun"></i><p>Light Mode</p>';
             logo.src = 'https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogo.png';
-            buttonNav.setAttribute('fill', 'var(--button-color)');
+            hamburgerButton.setAttribute('fill', 'var(--button-color)');
+            buttonNav.style.border = '2px solid #bcbbff'
+
         }
         
     }
-    // Dark/Light mode anchor for mobile
+    // Dark/Light mode anchors for mobile & full screen
     const viewModeAnchorMobile = document.getElementById('viewModeAnchorMobile');
-    //Event handler
-    viewModeAnchorMobile.onclick = viewModeTwo;
+    const viewModeAnchorFull = document.getElementById('viewModeAnchorFullScreen')
+    //Event handlers
+    viewModeAnchorMobile.onclick = viewMode;
+    viewModeAnchorFull.onclick = viewMode;

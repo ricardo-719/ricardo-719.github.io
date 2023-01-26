@@ -6,11 +6,6 @@
     padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color:inherit;
-}
-
 html {
     font-size: 16px;
     font-family: 'Pacifico', cursive;
@@ -19,13 +14,16 @@ html {
 body {
   color: #bcbbff;
   background-color: #181818;
-    /*background-color: #0D1A81;*/
-    /*background-color: whitesmoke;*/
 }
 
 .bodyLightmode {
   color:#181818;
   background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
 }
 
 header {
@@ -34,13 +32,6 @@ header {
 }
 
 #logo {
-  max-width: 23rem;
-  height: auto;
-  margin-top: 1%;
-}
-
-#logoLightmode {
-  display: none;
   max-width: 23rem;
   height: auto;
   margin-top: 1%;
@@ -82,10 +73,6 @@ nav ul li {
   display: none;
 }
 
-#toggleLightmodeOne, #toggleLightmodeTwo {
-  display: none;
-}
-
 @media only screen and (max-width: 890px) {
 
   .mobile {
@@ -123,13 +110,6 @@ nav ul li {
   }
 
   #logo {
-    max-width: 15rem;
-    height: auto;
-    margin-top: 1%;
-    margin-left: 1%;
-  }
-
-  #logoLightmode {
     max-width: 15rem;
     height: auto;
     margin-top: 1%;
@@ -238,50 +218,3 @@ nav ul li {
   position: relative;
   z-index: 1;
 }*/
-
-/*We'll enable dark and light mode, at every step create two designs
-and two versions of CSS to be flipped with JS
-https://blog.tbhcreative.com/dark-mode-design-14-examples-of-black/#:~:text=Here%20are%20some%20of%20the%20most%20popular%20dark,add%20rich%20darkness%20to%20websites%3A%20%230A0A0A%20%23121212%20%2315292B
-<style>
-      body {
-        padding: 25px;
-        background-color: white;
-        color: black;
-        font-size: 25px;
-      }
-      .dark-mode {
-        background-color: black;
-        color: white;
-      }
-      .light-mode {
-        background-color: white;
-        color: black;
-      }
-    </style>
-  <body>
-    <h1>GeeksForGeeks</h1>
-  
-    <p>
-      This is a sample GeeksForGeeks Text. 
-      Dark Mode Websites using Html CSS &
-      Javascript
-    </p>
-  
-    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-    <button onclick="darkMode()">Darkmode</button>
-    <button onclick="lightMode()">LightMode</button>
-    <script>
-      function darkMode() {
-        var element = document.body;
-        var content = document.getElementById("DarkModetext");
-        element.className = "dark-mode";
-        content.innerText = "Dark Mode is ON";
-      }
-      function lightMode() {
-        var element = document.body;
-        var content = document.getElementById("DarkModetext");
-        element.className = "light-mode";
-        content.innerText = "Dark Mode is OFF";
-      }
-    </script>
-    */
