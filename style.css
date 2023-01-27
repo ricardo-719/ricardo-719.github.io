@@ -22,8 +22,41 @@ body {
 }
 
 a {
+  position: relative;
   text-decoration: none;
   color:inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a:active {
+  opacity: 0.3;
+}
+
+.aNav:hover {
+  opacity: 0.7;
+}
+
+.aNav:active {
+  opacity: 0.3;
+}
+
+.aNav:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(245, 91, 91, 0.473);
+  height: 0.2rem;
+  width: 0;
+  left:0;
+  bottom: -0.1rem;
+  transition: 0.4s;
+}
+
+.aNav:hover:after {
+  width: 100%;
 }
 
 header {
