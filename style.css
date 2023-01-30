@@ -1,19 +1,32 @@
 /* Contrast ratio of fonts/background is 9.88:1*/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 16px;
-    font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  font-family: 'Pacifico', cursive;
+  /**/
+  /*font-family: 'Tajawal', sans-serif;*/
 }
+
+h2 {
+  font-family: 'Limelight', cursive;
+  font-size: 2.2rem;
+}
+
+/*p {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.3rem;
+}*/
 
 body {
   color: #bcbbff;
   background-color: #181818;
+  overflow: hidden;
 }
 
 .bodyLightmode {
@@ -104,6 +117,67 @@ nav ul li {
 
 .mobile {
   display: none;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  margin: 6% 3%;
+  width: 100%;
+
+
+}
+
+#intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 3% auto;
+}
+
+#aboutMeTitle {
+  margin-left: 5%;
+}
+
+#mainDes {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 2rem;
+  max-width: 40rem;
+  margin: 3% 3%;
+}
+
+.imgContainer {
+  height: 26rem;
+  padding: 0;
+}
+
+#imgSplash {
+  max-width: 26rem;
+  border-radius: 0.5rem;
+  margin: 0 2%;
+}
+
+.introBtn {
+  width: 8rem;
+  height: 4rem;
+  background-color: transparent;
+  color: inherit;
+  border: 3px solid #bcbbff;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  margin-top: 1%;
+}
+
+.introBtn:hover {
+  background-color: #bcbbff80;
+  transition: 500ms;
+}
+
+.introBtn:active {
+  width: 7.9rem;
+  height: 3.9rem;
+  transform: (0.1rem, 0.1rem);
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 890px) {
