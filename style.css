@@ -26,7 +26,7 @@ h2 {
 body {
   color: #bcbbff;
   background-color: #181818;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .bodyLightmode {
@@ -153,6 +153,7 @@ nav ul li {
 
 #imgSplash {
   max-width: 26rem;
+  border: 0.1rem solid #bcbbff;
   border-radius: 0.5rem;
   margin: 0 2%;
 }
