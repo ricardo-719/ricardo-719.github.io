@@ -146,19 +146,15 @@ nav ul li {
   margin: 3% 3%;
 }
 
-.imgContainer {
-  height: 26rem;
-  padding: 0;
-}
-
 #imgSplash {
+  align-self: center;
   max-width: 26rem;
-  border: 0.1rem solid #bcbbff;
+  border: 0.2rem solid #bcbbff;
   border-radius: 0.5rem;
   margin: 0 2%;
 }
 
-.introBtn {
+#introBtn {
   width: 8rem;
   height: 4rem;
   background-color: transparent;
@@ -169,15 +165,12 @@ nav ul li {
   margin-top: 1%;
 }
 
-.introBtn:hover {
+#introBtn:hover {
   background-color: #bcbbff80;
   transition: 500ms;
 }
 
-.introBtn:active {
-  width: 7.9rem;
-  height: 3.9rem;
-  transform: (0.1rem, 0.1rem);
+#introBtn:active {
   opacity: 0.8;
 }
 
@@ -282,6 +275,11 @@ nav ul li {
 
   #headerMenuNav li a {
     font-size: 1.3rem;
+  }
+
+  #intro {
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }
 
