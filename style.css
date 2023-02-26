@@ -124,8 +124,6 @@ nav ul li {
   flex-direction: column;
   margin: 6% 3%;
   width: 100%;
-
-
 }
 
 #intro {
@@ -146,12 +144,27 @@ nav ul li {
   margin: 3% 3%;
 }
 
-#imgSplash {
+#subDes {
+  min-height: 14.4rem;
+}
+
+#imgContainer{
   align-self: center;
-  max-width: 26rem;
+  max-width: 24rem;
+  max-height: 24rem;
+  height: fit-content;
   border: 0.2rem solid #bcbbff;
   border-radius: 0.5rem;
+  padding: 0%;
   margin: 0 2%;
+  overflow: hidden;
+}
+
+#aboutImages {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #introBtn {

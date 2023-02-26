@@ -46,7 +46,7 @@ viewModeAnchorMobile.onclick = viewMode;
 viewModeAnchorFull.onclick = viewMode;
 
 // About Me section slices
-const aboutMeImg = document.getElementById('imgSplash');
+const aboutMeImg = document.getElementById('aboutImages');
 const aboutMeText = document.getElementById('subDes');
 const aboutMeButton = document.getElementById('introBtn')
 let currentSlideIndx = 1;
