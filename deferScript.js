@@ -15,6 +15,10 @@ let toggleDarkmodeOne = document.getElementById("toggleDarkmodeOne"); // Toggle 
 let toggleDarkmodeTwo = document.getElementById("toggleDarkmodeTwo"); // Toggle Button (Full Screen)
 let buttonNav = document.getElementById("headerButtonNav") // Ham. button container
 let hamburgerButton = document.getElementById("hamburgerButton"); // Ham. button (svg)
+// About Me section slices
+const aboutMeImg = document.getElementById('aboutImages');
+const aboutMeText = document.getElementById('subDes');
+const aboutMeButton = document.getElementById('introBtn')
 
 // Darkmode Function
 const viewMode = () => {
@@ -27,6 +31,8 @@ const viewMode = () => {
         logo.src = 'https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogoLightMode.png';
         hamburgerButton.setAttribute('fill', 'var(#181818)');
         buttonNav.style.border = '2px solid #181818'
+        aboutMeButton.style.border = '3px solid #181818'
+        aboutMeImg.style.border = '0.2rem solid #181818'
     } else {
         toggleState = true;
         toggleDarkmodeOne.innerHTML = '<i class="fa-regular fa-sun"></i><p>Light Mode</p>';
@@ -34,7 +40,8 @@ const viewMode = () => {
         logo.src = 'https://escrituras-eremitas.com/wp-content/uploads/2023/01/CS50HomepageLogo.png';
         hamburgerButton.setAttribute('fill', 'var(--button-color)');
         buttonNav.style.border = '2px solid #bcbbff'
-
+        aboutMeButton.style.border = '3px solid #bcbbff'
+        aboutMeImg.style.border = '0.2rem solid #bcbbff'
     }
         
 }
@@ -45,10 +52,7 @@ const viewModeAnchorFull = document.getElementById('viewModeAnchorFullScreen')
 viewModeAnchorMobile.onclick = viewMode;
 viewModeAnchorFull.onclick = viewMode;
 
-// About Me section slices
-const aboutMeImg = document.getElementById('aboutImages');
-const aboutMeText = document.getElementById('subDes');
-const aboutMeButton = document.getElementById('introBtn')
+
 let currentSlideIndx = 1;
 const aboutMeImgArray = [
     "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic1.jpg",
