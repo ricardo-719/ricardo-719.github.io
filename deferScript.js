@@ -1,3 +1,15 @@
+function deferImgsInjection() {
+    console.log('imgs loaded')
+    const imgContainer = document.getElementById('imgContainer');
+    const imgsData = `
+    <img id="pic2" class="standByImg" src="https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic2.jpeg" loading="auto" alt="Ricky shirt & tie">
+    <img id="pic3" class="standByImg" src="https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic3.jpg" loading="auto" alt="Ricky wife & dad">
+    <img id="pic4" class="standByImg" src="https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic4.jpg" loading="auto" alt="Buddhist">
+    <img id="pic5" class="standByImg" src="https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic5.jpg" loading="auto" alt="Ricky at school"> `;
+    imgContainer.insertAdjacentHTML('beforeend', imgsData);
+}
+deferImgsInjection();
+
 // Ham. button display menu function
 function active() {
     let hBN = document.getElementById('headerButtonNav');
