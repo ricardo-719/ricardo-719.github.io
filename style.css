@@ -155,13 +155,17 @@ nav ul li {
   
 }
 
-#aboutImages {
+.aboutImages {
   width: 100%;
   max-width: 24rem;
   border: 0.2rem solid #bcbbff;
   border-radius: 0.5rem;
   padding: 0;
   margin: 0;
+}
+
+.standByImg {
+  display: none;
 }
 
 #introBtn {

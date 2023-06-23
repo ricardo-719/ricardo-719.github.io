@@ -16,9 +16,10 @@ let toggleDarkmodeTwo = document.getElementById("toggleDarkmodeTwo"); // Toggle 
 let buttonNav = document.getElementById("headerButtonNav") // Ham. button container
 let hamburgerButton = document.getElementById("hamburgerButton"); // Ham. button (svg)
 // About Me section slices
-const aboutMeImg = document.getElementById('aboutImages');
+const aboutMeImg = document.querySelector('.aboutImages');
+const standByImgs = document.querySelectorAll('.standByImg');
 const aboutMeText = document.getElementById('subDes');
-const aboutMeButton = document.getElementById('introBtn')
+const aboutMeButton = document.getElementById('introBtn');
 
 // Darkmode Function
 const viewMode = () => {
@@ -33,6 +34,9 @@ const viewMode = () => {
         buttonNav.style.border = '2px solid #181818'
         aboutMeButton.style.border = '3px solid #181818'
         aboutMeImg.style.border = '0.2rem solid #181818'
+        standByImgs.forEach((img) => {
+            img.style.border = '0.2rem solid #181818'
+        })
     } else {
         toggleState = true;
         toggleDarkmodeOne.innerHTML = '<i class="fa-regular fa-sun"></i><p>Light Mode</p>';
@@ -42,6 +46,9 @@ const viewMode = () => {
         buttonNav.style.border = '2px solid #bcbbff'
         aboutMeButton.style.border = '3px solid #bcbbff'
         aboutMeImg.style.border = '0.2rem solid #bcbbff'
+        standByImgs.forEach((img) => {
+            img.style.border = '0.2rem solid #bcbbff'
+        })
     }
         
 }
@@ -54,12 +61,13 @@ viewModeAnchorFull.onclick = viewMode;
 
 
 let currentSlideIndx = 1;
+let currentImg;
 const aboutMeImgArray = [
-    "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic1.jpg",
-    "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic2.jpeg",
-    "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic3.jpg",
-    "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic4.jpg",
-    "https://escrituras-eremitas.com/wp-content/uploads/2022/11/pic5.jpg"
+    "pic1",
+    "pic2",
+    "pic3",
+    "pic4",
+    "pic5"
 ];
 const aboutMeTextArray = [
     "Welcome to my homepage! Here you will learn more about myself and my programming journey. I will share my background, hobbies and even some of my most notable projects. Enjoy!",
@@ -71,10 +79,20 @@ const aboutMeTextArray = [
 
 // Function for changing slices
 const aboutMeChangeSlide = () => {
-    if(currentSlideIndx >= aboutMeImgArray.length) {
+    if (currentSlideIndx >= aboutMeImgArray.length) {
         currentSlideIndx = 0;
     }
-    aboutMeImg.src = aboutMeImgArray[currentSlideIndx];
+    if (currentSlideIndx === 0) {
+        currentImg = document.getElementById(aboutMeImgArray[aboutMeImgArray.length - 1])
+    } else {
+        currentImg = document.getElementById(aboutMeImgArray[currentSlideIndx - 1]);
+    }
+    nextImg = document.getElementById(aboutMeImgArray[currentSlideIndx])
+    
+    currentImg.classList.add('standByImg');
+    currentImg.classList.remove('aboutImages');
+    nextImg.classList.remove('standByImg');
+    nextImg.classList.add('aboutImages')
     aboutMeText.innerHTML = aboutMeTextArray[currentSlideIndx];
     aboutMeButton.innerHTML =  `Next [${currentSlideIndx + 1}/5]`;
     currentSlideIndx++;
