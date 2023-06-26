@@ -9,7 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Pacifico&family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Ysabeau+SC&family=Tajawal&family=Fresca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="asyncScript.js" async></script>
     <script src="deferScript.js" defer></script>
@@ -51,7 +51,7 @@
         </a>
     </header>
     <section id="about-me">
-        <h2 id="aboutMeTitle">About Me</h2>
+        <h2 class="sectionTitle">About Me</h2>
         <hr>
         <div id="intro">
             <div id="mainDes">
@@ -65,11 +65,23 @@
         </div> 
         <hr>  
     </section>
-    <section id="porfolio">
-        <h3>Project Listing</h3>
-        <ul>
-            <li><a href="./ca-messagesGenerator-mixedMessages/index.html">Mixed Messaged (Codecademy Project) GitHub</a></li>
-        </ul>
+    <section id="portfolio">
+        <h2 class="sectionTitle">Project Listing</h2>
+        <hr>
+        <div id="portfolioInstancesContainer">
+            <div class="portfolioInstance">
+                <h3 class="projectTitle">Mixed Messages</h3>
+                <div class="projectDescription">
+                    <span>
+                        <img class="portfolioImg" src="./images/MixedMessages.png" alt="">
+                    </span>
+                    <span>
+                        <h4>An Action Generator (HTML, CSS, JavaScript)</h4>
+                        <a href="./ca-messagesGenerator-mixedMessages/index.html">Mixed Messaged (Codecademy Project) GitHub</a>
+                    </span>    
+                </div>
+            </div>
+        </div>
     </section>
     <section id="skills"></section>
     <section id="contact"></section>
