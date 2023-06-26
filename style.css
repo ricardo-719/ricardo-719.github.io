@@ -1,5 +1,11 @@
 /* Contrast ratio of fonts/background is 9.88:1*/
 
+:root {
+  --box-shadow-color: rgba(250, 250, 250, 0.35); /* Shadow color for Dark mode */
+  --border-color: white; /* Shadow color for Dark mode */
+  --text-decoration-color: white; /* Underline color for Dark mode */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +15,24 @@
 html {
   font-size: 16px;
   font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: #bcbbff;
+  background-color: #181818;
+  overflow-x: hidden;
+}
+
+.bodyLightmode {
+  display: flex;
+  flex-direction: column;
+  color:#181818;
+  background-color: whitesmoke;
+  --box-shadow-color: rgba(0, 0, 0, 0.35); 
+  --border-color: black;
+  --text-decoration-color: black;
 }
 
 h2 {
@@ -25,19 +49,8 @@ h4 {
   font-family: 'Fresca', sans-serif;
   font-size: 1.4rem;
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: var(--text-decoration-color);
   line-height: 1.5;
-}
-
-body {
-  color: #bcbbff;
-  background-color: #181818;
-  overflow-x: hidden;
-}
-
-.bodyLightmode {
-  color:#181818;
-  background-color: whitesmoke;
 }
 
 a {
@@ -209,10 +222,9 @@ nav ul li {
 .portfolioInstance {
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
   border-radius: 0.9rem;
-  box-shadow: rgba(250, 250, 250, 0.35) 0px 5px 15px;
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; Light version color */
+  box-shadow: var(--box-shadow-color) 0px 5px 15px;
   margin: 1.5rem 0rem 2.5rem;
   padding: 1.9rem 1.8rem 1.6rem;
   height: 22rem;
@@ -232,7 +244,7 @@ nav ul li {
 }
 
 .portfolioImg {
-  max-width: 30rem;
+  max-width: 28rem;
   border-radius: 0.9rem;
   margin-top: 0.6rem;
 }
@@ -343,6 +355,14 @@ nav ul li {
   #intro {
     flex-direction: column;
     gap: 0.3rem;
+  }
+
+  #portfolio {
+    margin-top: 20rem;
+  }
+
+  .projectDescription {
+    flex-direction: column;
   }
 }
 
