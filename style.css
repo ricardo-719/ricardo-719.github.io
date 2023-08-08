@@ -412,6 +412,10 @@ nav ul li {
   }
 }
 
+.skillsImgs {
+  max-width: 5rem;
+}
+
 @media only screen and (min-width: 890px) {
   #intro {
     height: 100%;
