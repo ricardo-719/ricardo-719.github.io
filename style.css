@@ -283,6 +283,37 @@ nav ul li {
   display: inline-block;
 }
 
+#skills {
+  width: 95%;
+  margin: 4rem 2%;
+  width: 95%;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns:repeat(6, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  box-shadow: var(--box-shadow-color) 0px 5px 15px;
+  margin: 3rem 0rem 2.5rem;
+  padding: 1.9rem 1.8rem 1.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .skillsContainer {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+}
+
+.skillsImgs {
+  max-width: 5rem;
+  padding: 0.3rem;
+  margin: 0.1rem;
+}
+
 @media only screen and (max-width: 890px) {
 
   .mobile {
@@ -410,10 +441,6 @@ nav ul li {
     margin: 3% 0;
     align-self: center;
   }
-}
-
-.skillsImgs {
-  max-width: 5rem;
 }
 
 @media only screen and (min-width: 890px) {
