@@ -303,9 +303,16 @@ nav ul li {
   padding: 1.9rem 1.8rem 1.6rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
   .skillsContainer {
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .skillsContainer {
+    /* grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); */
+    grid-template-columns: 1fr;
   }
 }
 
