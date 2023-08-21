@@ -286,7 +286,6 @@ nav ul li {
 #skills {
   width: 95%;
   margin: 4rem 2%;
-  width: 95%;
 }
 
 .skillsContainer {
@@ -339,6 +338,43 @@ nav ul li {
   max-width: 5rem;
   padding: 0.3rem;
   margin: 0.1rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 4rem 2%;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 5%;
+  width: 90%;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  text-align: left;
+  max-width: 30%;
+  margin-left: 0.2rem;
+}
+
+.contactInfo p, .contactInfo address {
+  padding: 1rem 0rem;
+}
+
+.map img {
+  border: 1px solid gray;
+  padding: 2px;
+  max-width: 80%;
+  float: right;
 }
 
 @media only screen and (max-width: 890px) {
