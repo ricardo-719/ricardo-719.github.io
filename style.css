@@ -340,6 +340,13 @@ nav ul li {
   margin: 0.1rem;
 }
 
+.certificationInstance {
+  display: flex;
+  justify-content:flex-start;
+  gap: 10rem;
+  margin-left: 2rem;
+}
+
 #contact {
   display: flex;
   flex-direction: column;
